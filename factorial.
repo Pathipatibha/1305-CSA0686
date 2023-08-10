@@ -1,0 +1,22 @@
+#include<stdio.h>
+#include<ctype.h>
+int fact(int n)
+{
+	if(n==0)
+	  return 1;
+	return fact(n-1)*n;
+}
+int main()
+{
+	int n;
+	printf(" enter the factorial number:");
+	scanf("%d",&n);
+	if(isdigit(n))
+	{
+		if(n<0)
+		  printf(" negative numbers not allowed ");
+		else
+		  printf(" the factorial of %d is %d",n,fact(n));
+	}
+	printf(" invalid input");
+}
