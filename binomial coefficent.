@@ -1,0 +1,27 @@
+#include<stdio.h>
+#include<ctype.h>
+int bico(int n,int k)
+{
+	if(k>n)
+	  return 0;
+	if(k==0 || k==n)
+	  return 1;
+	return bico(n-1,k-1)+bico(n-1,k);
+}
+int main()
+{ 
+   	int n , k;
+	printf (" enter the n value:");
+	scanf("%d",&n);
+	printf (" enter the k value:");
+	scanf("%d",&k);	
+	if(isdigit(k||n))
+	{
+		if(k<0 || n<0)
+		   printf(" wrong input");
+		else
+		  printf(" the value of c(%d,%d) is %d",n,k,bico(n,k));
+	}
+	printf(" wrong input");
+	return 0;
+}
